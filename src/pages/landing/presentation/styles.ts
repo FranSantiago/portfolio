@@ -50,7 +50,8 @@ export const Bio = styled.div`
 
   z-index: 1;
 
-  p {
+  p,
+  span {
     color: var(--secondary-text);
   }
 

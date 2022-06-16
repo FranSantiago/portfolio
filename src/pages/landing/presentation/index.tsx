@@ -6,6 +6,7 @@ import breakpoints from '@/constants/breakpoints';
 import Dev from '@/components/dev-icon';
 import LetsChatButton from '@/components/lets-chat-button';
 import SocialButtons from '@/components/social-buttons';
+import Typer from '@/components/typer';
 
 import {
   Badge,
@@ -24,6 +25,13 @@ const Presentation: React.FC = () => {
     query: `(max-width: ${breakpoints.small.width.max}px)`,
   });
 
+  const bioTexts = [
+    isSmallScreen ? `<p>Hello, I'm Françoar!</p>` : '',
+    `I'm completely passionate about knowledge and problem
+    solving. After explore as much as I can, I apply the best
+    practices.`,
+  ];
+
   return (
     <Wrapper>
       <Content>
@@ -39,12 +47,7 @@ const Presentation: React.FC = () => {
             </Quote>
 
             <Bio>
-              {isSmallScreen && <p>Hello, I&apos;m Françoar!</p>}
-              <p>
-                I&apos;m completely passionate about knowledge and problem
-                solving. After explore as much as I can, I apply the best
-                practices.
-              </p>
+              <Typer texts={bioTexts} typingDelayMs={40} />
             </Bio>
 
             <LetsChatButton />
