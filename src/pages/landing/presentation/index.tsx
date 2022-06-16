@@ -21,7 +21,7 @@ import {
 
 const Presentation: React.FC = () => {
   const isSmallScreen = useMediaQuery({
-    query: `(max-width: ${breakpoints.small.max}px)`,
+    query: `(max-width: ${breakpoints.small.width.max}px)`,
   });
 
   return (
@@ -39,6 +39,7 @@ const Presentation: React.FC = () => {
             </Quote>
 
             <Bio>
+              {isSmallScreen && <p>Hello, I&apos;m Françoar!</p>}
               <p>
                 I&apos;m completely passionate about knowledge and problem
                 solving. After explore as much as I can, I apply the best

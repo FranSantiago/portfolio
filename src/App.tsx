@@ -14,7 +14,7 @@ function App() {
   const [isBlanketVisible, setIsBlanketVisible] = useState(false);
 
   const isSmallScreen = useMediaQuery({
-    query: `(max-width: ${breakpoints.small.max}px)`,
+    query: `(max-width: ${breakpoints.small.width.max}px)`,
   });
 
   useEffect(() => {

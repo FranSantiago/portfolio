@@ -14,13 +14,13 @@ interface INavbarProps {
 
 const Navbar: React.FC<INavbarProps> = ({ onClickHamburger }: INavbarProps) => {
   const isSmallScreen = useMediaQuery({
-    query: `(max-width: ${breakpoints.small.max}px)`,
+    query: `(max-width: ${breakpoints.small.width.max}px)`,
   });
 
   return (
     <Wrapper>
       <Content>
-        <Brand />
+        {!isSmallScreen && <Brand />}
         {isSmallScreen ? (
           <HamburgerIcon onClick={onClickHamburger} />
         ) : (

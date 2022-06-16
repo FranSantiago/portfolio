@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Close } from '@styled-icons/ionicons-solid';
 import { Element } from 'react-scroll';
+import breakpoints from '@/constants/breakpoints';
 
 interface IWrapperProps {
   isVisible: boolean;
@@ -27,6 +28,10 @@ export const Option = styled(Element)`
 
   :hover {
     color: var(--primary-text);
+  }
+
+  @media only screen and (max-width: ${breakpoints.small.width.max}px) {
+    font-size: 1.5rem;
   }
 `;
 
