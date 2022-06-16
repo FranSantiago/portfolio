@@ -15,7 +15,7 @@ const SocialButtons: React.FC = () => {
       >
         <LinkedinLogo />
       </Link>
-      <Link href="https:github.com/fransantiago" target="_blank">
+      <Link href="https://github.com/fransantiago" target="_blank">
         <GithubLogo />
       </Link>
     </Wrapper>
