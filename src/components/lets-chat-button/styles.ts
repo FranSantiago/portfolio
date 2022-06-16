@@ -3,6 +3,17 @@ import styled from 'styled-components';
 import breakpoints from '@/constants/breakpoints';
 
 export default styled.a`
+  @keyframes blink {
+    0% {
+      background-color: var(--tertiary-bg);
+      color: var(--tertiary-text);
+    }
+    100% {
+      filter: brightness(60%);
+      color: var(--primary-text);
+    }
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +31,8 @@ export default styled.a`
   text-transform: uppercase;
 
   cursor: pointer;
+
+  animation: blink 0.8s ease-in 10s;
 
   transition: background-color 0.25s, color 0.25s;
 
