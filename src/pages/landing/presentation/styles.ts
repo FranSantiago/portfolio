@@ -90,7 +90,7 @@ export const LeftContent = styled.div`
       .max}px) and (max-height: ${breakpoints.xsmall.height.max}px) {
     align-items: flex-start;
     justify-content: center;
-    margin-top: calc(${navbar.height} + 3vh);
+    margin-top: calc(${navbar.height} + 2vh);
   }
 `;
 

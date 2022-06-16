@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import breakpoints from '@/constants/breakpoints';
+
 export default styled.a`
   display: flex;
   justify-content: center;
@@ -26,5 +28,10 @@ export default styled.a`
   &:hover {
     background-color: var(--tertiary-bg);
     color: var(--tertiary-text);
+  }
+
+  @media only screen and (max-width: ${breakpoints.xsmall.width
+      .max}px) and (max-height: ${breakpoints.xsmall.height.max}px) {
+    margin-top: 2rem;
   }
 `;
