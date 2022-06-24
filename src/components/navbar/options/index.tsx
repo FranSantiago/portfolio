@@ -8,7 +8,7 @@ const Options: React.FC = () => {
   return (
     <Wrapper>
       {MenuOptions.map((option) => (
-        <Option key={option.name} name={option.name}>
+        <Option key={option.name} to={option.name} smooth>
           {option.content}
         </Option>
       ))}

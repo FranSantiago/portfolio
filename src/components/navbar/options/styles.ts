@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Element } from 'react-scroll';
+import { Link } from 'react-scroll';
 
-export const Option = styled(Element)`
+export const Option = styled(Link)`
   font-size: 1rem;
   font-weight: 600;
 
@@ -15,7 +15,7 @@ export const Option = styled(Element)`
 export const Wrapper = styled.div`
   display: flex;
 
-  div:not(:first-child) {
+  a:not(:first-child) {
     margin-left: 2rem;
   }
 `;
