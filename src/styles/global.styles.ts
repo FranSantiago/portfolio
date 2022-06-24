@@ -33,13 +33,25 @@ export default createGlobalStyle`
     --tertiary-bg: #03c4e8;
 
     --black: #c6c6c6;
-    --gray: #afafaf;
+    --gray: #7A7A7A4C;
 
-    --header: #181818;
-    --logo: #fff;
-    --username: #9b9b9b;
-    --search: #151515;
+    --primary-70: #03c4e8b3;
 
     font-family: 'Raleway', 'sans-serif';
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--gray);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-bg);
+
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
   }
 `;
