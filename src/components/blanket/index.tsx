@@ -19,7 +19,12 @@ const Blanket: React.FC<IBlanketProps> = ({
     <Wrapper isVisible={isVisible}>
       <CloseIcon onClick={onClose} />
       {MenuOptions.map((option) => (
-        <Option key={option.name} name={option.name} onClick={onClickOption}>
+        <Option
+          key={option.name}
+          to={option.name}
+          onClick={onClickOption}
+          smooth
+        >
           {option.content}
         </Option>
       ))}

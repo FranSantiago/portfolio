@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Close } from '@styled-icons/ionicons-solid';
-import { Element } from 'react-scroll';
+import { Link } from 'react-scroll';
 import breakpoints from '@/constants/breakpoints';
 
 interface IWrapperProps {
@@ -17,7 +17,7 @@ export const CloseIcon = styled(Close)`
   cursor: pointer;
 `;
 
-export const Option = styled(Element)`
+export const Option = styled(Link)`
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 0.2rem;
@@ -36,7 +36,7 @@ export const Option = styled(Element)`
 `;
 
 export const Wrapper = styled.div<IWrapperProps>`
-  position: absolute;
+  position: fixed;
 
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ export const Wrapper = styled.div<IWrapperProps>`
 
   z-index: 10;
 
-  div:not(:first-child) {
+  a:not(:first-child) {
     margin-top: 1.5rem;
   }
 `;
