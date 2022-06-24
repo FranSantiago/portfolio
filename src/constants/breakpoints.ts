@@ -15,4 +15,10 @@ export default {
       min: 481,
     },
   },
+  large: {
+    width: {
+      max: 1199,
+      min: 992,
+    },
+  },
 };
