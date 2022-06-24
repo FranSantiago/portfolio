@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 import LANDING from '@/constants/landing';
 import breakpoints from '@/constants/breakpoints';
-import navbar from '@/constants/navbar';
+
+import GlobalWrapper from '@/styles/landing-sections-wrapper.styles';
 
 export const Badge = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ export const Quote = styled.p`
   font-size: 2.87rem;
   font-weight: 600;
 
-  z-index: 1;
+  z-index: 0;
 
   span {
     display: block;
@@ -48,7 +49,7 @@ export const Bio = styled.div`
 
   margin-top: 1rem;
 
-  z-index: 1;
+  z-index: 0;
 
   p,
   span {
@@ -91,7 +92,6 @@ export const LeftContent = styled.div`
       .max}px) and (max-height: ${breakpoints.xsmall.height.max}px) {
     align-items: flex-start;
     justify-content: center;
-    margin-top: calc(${navbar.height} + 2vh);
   }
 `;
 
@@ -138,12 +138,7 @@ export const Social = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-
+export const Wrapper = styled(GlobalWrapper)`
   display: flex;
   justify-content: center;
-
-  overflow: hidden;
 `;
