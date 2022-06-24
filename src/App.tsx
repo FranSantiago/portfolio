@@ -1,17 +1,27 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import WebFontLoader from 'webfontloader';
 
+import BackToTop from '@/components/back-to-top';
 import Blanket from '@/components/blanket';
-import GlobalStyles from '@/styles/global.styles';
-import Landing from '@/pages/landing';
 import Navbar from '@/components/navbar';
+
+import Routes from '@/routes';
 
 import breakpoints from '@/constants/breakpoints';
 
+import { useAppDispatch } from '@/store';
+import { setIsScrolling, setIsSmallScreen } from '@/store/ducks/page';
+
+import useScrolling from '@/hooks/use-scrolling';
+
+import GlobalStyles from '@/styles/global.styles';
+
 function App() {
+  const dispatch = useAppDispatch();
+
   const [isBlanketVisible, setIsBlanketVisible] = useState(false);
+  const [isScrolling] = useScrolling();
 
   const isSmallScreen = useMediaQuery({
     query: `(max-width: ${breakpoints.small.width.max}px)`,
@@ -20,30 +30,37 @@ function App() {
   useEffect(() => {
     WebFontLoader.load({
       google: {
-        families: ['Raleway:400,500,600,700', 'sans-serif'],
+        families: ['Raleway:400,500,600,700', 'Indie Flower', 'sans-serif'],
       },
     });
   }, []);
 
   useEffect(() => {
     if (!isSmallScreen) setIsBlanketVisible(false);
+
+    dispatch(setIsSmallScreen(isSmallScreen));
   }, [isSmallScreen]);
 
+  useEffect(() => {
+    dispatch(setIsScrolling(isScrolling));
+  }, [isScrolling]);
+
   return (
-    <BrowserRouter>
+    <>
       <Blanket
         isVisible={isBlanketVisible}
-        onClickOption={() => setIsBlanketVisible(false) /* TODO: scroll */}
+        onClickOption={() => setIsBlanketVisible(false)}
         onClose={() => setIsBlanketVisible(!isBlanketVisible)}
       />
+
       <Navbar onClickHamburger={() => setIsBlanketVisible(!isBlanketVisible)} />
 
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
+      <Routes />
 
       <GlobalStyles />
-    </BrowserRouter>
+
+      {isScrolling && <BackToTop />}
+    </>
   );
 }
 
