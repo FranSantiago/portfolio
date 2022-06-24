@@ -9,6 +9,7 @@ export const HamburgerIcon = styled(Hamburger)`
   height: 1.5rem;
 
   cursor: pointer;
+  margin-left: auto;
 `;
 
 export const Content = styled.div`
@@ -27,7 +28,6 @@ export const Content = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  background-color: var(--primary-bg);
   display: flex;
   justify-content: center;
 

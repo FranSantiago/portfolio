@@ -1,7 +1,6 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
 
-import breakpoints from '@/constants/breakpoints';
+import { useAppSelector } from '@/store';
 
 import Brand from './brand';
 import Options from './options';
@@ -13,15 +12,13 @@ interface INavbarProps {
 }
 
 const Navbar: React.FC<INavbarProps> = ({ onClickHamburger }: INavbarProps) => {
-  const isSmallScreen = useMediaQuery({
-    query: `(max-width: ${breakpoints.small.width.max}px)`,
-  });
+  const { isScrolling, isSmallScreen } = useAppSelector(({ page }) => page);
 
   return (
     <Wrapper>
       <Content>
-        {!isSmallScreen && <Brand />}
-        {isSmallScreen ? (
+        {!isSmallScreen && !isScrolling ? <Brand /> : null}
+        {isSmallScreen || isScrolling ? (
           <HamburgerIcon onClick={onClickHamburger} />
         ) : (
           <Options />
