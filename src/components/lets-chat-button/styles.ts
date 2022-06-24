@@ -36,7 +36,7 @@ export default styled.a`
 
   transition: background-color 0.25s, color 0.25s;
 
-  z-index: 1;
+  z-index: 0;
 
   &:hover {
     background-color: var(--tertiary-bg);
