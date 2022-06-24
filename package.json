@@ -10,14 +10,17 @@
   },
   "dependencies": {
     "@craco/craco": "^6.4.3",
+    "@reduxjs/toolkit": "^1.8.2",
     "@styled-icons/fa-solid": "^10.34.0",
     "@styled-icons/ionicons-solid": "^10.34.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.2",
     "react-responsive": "^9.0.0-beta.10",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
+    "redux": "^4.2.0",
     "styled-components": "^5.3.5",
     "typewriter-effect": "^2.18.2",
     "webfontloader": "^1.6.28"
