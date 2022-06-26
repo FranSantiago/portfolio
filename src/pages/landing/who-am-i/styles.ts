@@ -1,8 +1,6 @@
 import { Element } from 'react-scroll';
 import styled from 'styled-components';
 
-import GlobalWrapper from '@/styles/landing-sections-wrapper.styles';
-
 import { ContentWrapper } from '@/components/header-content/styles';
 import breakpoints from '@/constants/breakpoints';
 
@@ -39,15 +37,20 @@ export const ContentBackground = styled.p`
 
   transform: rotate(-12deg);
 
-  @media only screen and (max-width: ${breakpoints.xsmall.width.max}px) {
-    font-size: 3.2rem;
-  }
-
   @media only screen and (max-width: ${breakpoints.small.width.max}px) {
+    font-size: 5.8rem;
     position: relative;
     top: 0;
 
     margin-top: 2rem;
+  }
+
+  @media only screen and (max-width: ${breakpoints.xsmall.width.max}px) {
+    font-size: 3.5rem;
+  }
+
+  @media only screen and (max-width: 300px) {
+    font-size: 2.8rem;
   }
 `;
 
@@ -134,8 +137,6 @@ export const Title = styled.p`
 `;
 
 export const Wrapper = styled(Element)`
-  ${GlobalWrapper};
-
   background-color: var(--secondary-bg);
 
   display: grid;
@@ -145,6 +146,8 @@ export const Wrapper = styled(Element)`
   grid-template-areas:
     'header-content header-content'
     'left-content right-content';
+
+  border-bottom: 1px solid var(--gray);
 
   @media only screen and (max-width: ${breakpoints.large.width.max}px) {
     grid-template-columns: 1fr;
