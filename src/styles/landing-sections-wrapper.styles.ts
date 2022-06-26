@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { Element } from 'react-scroll';
 
 import breakpoints from '@/constants/breakpoints';
 import navbar from '@/constants/navbar';
 
-export default styled.div`
+export default styled(Element)`
   height: 100vh;
   width: 100%;
 
