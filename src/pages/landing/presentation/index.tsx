@@ -33,7 +33,7 @@ const Presentation: React.FC = () => {
   ];
 
   return (
-    <Wrapper>
+    <Wrapper name="presentation">
       <Content>
         <LeftContent>
           <InnerLeftContentWrapper>
