@@ -20,7 +20,7 @@ const WhoAmI: React.FC = () => {
 
   return (
     <Wrapper name="about-me">
-      <HeaderContent section="About me" title="Who Am I?" />
+      <HeaderContent section="About me" title="Who am I?" />
       <RightContent>
         <Details>
           <Title>Françoar Santiago&apos;s details</Title>
