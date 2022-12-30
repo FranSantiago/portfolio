@@ -18,6 +18,8 @@ export const ArrowUpIcon = styled(AngleUp)`
 export const Wrapper = styled.div`
   position: fixed;
 
+  z-index: 2;
+
   display: flex;
   justify-content: center;
   align-items: center;
