@@ -15,8 +15,6 @@ export const MainContent = styled.div`
 
   padding-top: 5rem;
 
-  border-bottom: 1px solid var(--gray);
-
   @media only screen and (max-width: 660px) {
     padding-top: 1rem;
     max-width: 415px;
