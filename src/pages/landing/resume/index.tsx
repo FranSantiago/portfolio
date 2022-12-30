@@ -16,7 +16,7 @@ import { MainContent, Tab, TabsWrapper, Wrapper } from './styles';
 const Resume: React.FC = () => {
   const { isSmallScreen } = useAppSelector(({ page }) => page);
 
-  const [selectedTab, setSelectedTab] = useState(tabs.experience.id);
+  const [selectedTab, setSelectedTab] = useState(tabs.education.id);
 
   const options = React.useMemo(
     () =>
