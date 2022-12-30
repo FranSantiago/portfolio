@@ -34,7 +34,7 @@ const WhoAmI: React.FC = () => {
               I&apos;ve been working as Software Engineer and Tech Lead,
               improving and developing products that integrate functionalities
               between company departments and track raw materials
-              transformation, like MES systems.
+              transformation, like a MES (Manufacturing Execution System).
             </p>
             <p>Keep scrolling to see more about my tech stack!</p>
           </Description>
