@@ -23,7 +23,7 @@ const HowDoIHelp: React.FC = () => {
     },
     {
       icon: Server,
-      title: 'Backend',
+      title: 'Microservices',
       description:
         'Microservices with message brokers and async communication.',
     },
